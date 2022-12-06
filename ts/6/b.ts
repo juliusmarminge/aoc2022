@@ -1,16 +1,11 @@
 const input = await Deno.readTextFile("../../input/6.txt");
 
-const lastFour = [input[0], input[1], input[2]];
-
-for (let i = 3; i < input.length; i++) {
-  const letter = input[i];
-
-  lastFour.push(letter);
-  if (lastFour.length > 14) lastFour.shift();
-  const set = new Set(lastFour);
+for (let i = 13; i < input.length; i++) {
+  const lastFourteen = input.slice(i - 14, i);
+  const set = new Set(lastFourteen);
 
   if (set.size === 14) {
-    console.log(i + 1);
+    console.log(i);
     break;
   }
 }
