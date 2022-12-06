@@ -1,4 +1,4 @@
-const input = await Deno.readTextFile("../../input/6.txt");
+const input = await Deno.readTextFile("../../input/24.txt");
 
 const lines = input.split("\n");
 

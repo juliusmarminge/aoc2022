@@ -1,4 +1,4 @@
-const input = await Deno.readTextFile("../../input/1.txt");
+const input = await Deno.readTextFile("../../input/01.txt");
 
 const elves = input.split("\n\n").map((e) => e.split("\n"));
 

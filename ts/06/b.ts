@@ -1,4 +1,4 @@
-const input = await Deno.readTextFile("../../input/6.txt");
+const input = await Deno.readTextFile("../../input/06.txt");
 
 for (let i = 13; i < input.length; i++) {
   const lastFourteen = input.slice(i - 14, i);

@@ -1,4 +1,4 @@
-const input = await Deno.readTextFile("../../input/5.txt");
+const input = await Deno.readTextFile("../../input/05.txt");
 
 const [crates, moves] = input.split("\n\n");
 

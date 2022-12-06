@@ -1,4 +1,4 @@
-const input = await Deno.readTextFile("../../input/4.txt");
+const input = await Deno.readTextFile("../../input/04.txt");
 
 let sum = 0;
 
@@ -9,7 +9,9 @@ input.split("\n").forEach((l) => {
   const [two1, two2] = two.split("-");
   console.log(l, one1, one2, two1, two2);
 
-  if (Number(one1) <= Number(two2) && Number(two1) <= Number(one2)) {
+  if (Number(one1) >= Number(two1) && Number(one2) <= Number(two2)) {
+    sum++;
+  } else if (Number(one1) <= Number(two1) && Number(one2) >= Number(two2)) {
     sum++;
   }
 });
