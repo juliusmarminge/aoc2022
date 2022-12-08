@@ -33,7 +33,7 @@ fn pt2(input: &str) {
 }
 
 fn main() {
-    let input = include_str!("../../../input/1.txt");
+    let input = include_str!("../../../input/01.txt");
 
     pt1(input);
     pt2(input);
