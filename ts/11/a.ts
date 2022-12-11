@@ -23,7 +23,7 @@ const parsed = monkeys.map((monkey) => {
 
 const inspectedTimes = Array.from({ length: parsed.length }, () => 0);
 
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 20; i++) {
   parsed.forEach((monkey, idx) => {
     while (monkey.startingItems.length) {
       inspectedTimes[idx]++;
@@ -32,7 +32,7 @@ for (let i = 0; i < 10000; i++) {
       const evalString = `${item} ${monkey.op[3]} ${
         monkey.op[4] === "old" ? item : monkey.op[4]
       }`;
-      const res = Math.floor(eval(evalString) % 3);
+      const res = Math.floor(eval(evalString) / 3);
 
       if (res % parseInt(monkey.test[2]) === 0) {
         const throwTo = parseInt(monkey.ifTrue[3]);
