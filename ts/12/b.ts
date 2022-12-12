@@ -53,4 +53,4 @@ for (let i = 0; i < starts.length; i++) {
   }
 }
 
-console.log("scores", Math.min(...scores));
+console.log("min score", Math.min(...scores));
